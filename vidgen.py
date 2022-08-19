@@ -470,8 +470,8 @@ while c.is_stopped() == 0:
           	'video_id' : vid,
 	  	'token' : 'ZK2xcDVghfgSGnseg1fYdY7',
           	'json' : pjson }
-		url="https://producer.mangomolo.com/index.php/api/update-progress-generating"
-		output=urllib2.urlopen('https://producer.mangomolo.com/index.php/api/update-progress-generating?token=ZK2xcDVghfgSGnseg1fYdY7&video_id='+vid+'&user_id='+uid+'&json={%22Progress%22%3A+%22'+str(percent)+'%22%2C+%22video%22%3A+%22%22}').read()
+		url="https://urp"
+		output=urllib2.urlopen('url?token=ZK2xcDVghfgSGnseg1fYdY7&video_id='+vid+'&user_id='+uid+'&json={%22Progress%22%3A+%22'+str(percent)+'%22%2C+%22video%22%3A+%22%22}').read()
 		print output
 	else:
 		print percent
@@ -479,7 +479,7 @@ if save_video:
 	os.chmod(tv.name, 0644)
 	print "video file:  "+ tv.name
 	pjson['video']=tv.name
-	output=urllib2.urlopen('https://producer.mangomolo.com/index.php/api/update-progress-generating?token=ZK2xcDVghfgSGnseg1fYdY7&video_id='+vid+'&user_id='+uid+'&json={%22Progress%22%3A+%22'+str(percent)+'%22%2C+%22video%22:%20%22'+tv.name+'%22%20}').read()
+	output=urllib2.urlopen('url?token=ZK2xcDVghfgSGnseg1fYdY7&video_id='+vid+'&user_id='+uid+'&json={%22Progress%22%3A+%22'+str(percent)+'%22%2C+%22video%22:%20%22'+tv.name+'%22%20}').read()
 	print output
 #for f in ftodel:
 #	os.remove(f) 
